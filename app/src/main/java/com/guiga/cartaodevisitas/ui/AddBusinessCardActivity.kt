@@ -23,7 +23,6 @@ class AddBusinessCardActivity : AppCompatActivity() {
         }
 
         binding.btBtnConfirm.setOnClickListener{
-
         }
     }
 }
