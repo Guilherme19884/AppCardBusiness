@@ -4,7 +4,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-class BusinessCardrepository(private val dao: BusinessCardDao){
+class BusinessCardRepository(private val dao: BusinessCardDao){
 
     fun insert(businessCard: BusinessCard) = runBlocking {
         launch(Dispatchers.IO){
