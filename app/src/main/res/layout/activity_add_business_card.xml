@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.AddBusinessCardActivity">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.guiga.cartaodevisitas.ui.MainViewModel" />
+    </data>
+
+
     <ImageButton
         android:id="@+id/bt_btnClose"
         android:layout_width="50dp"

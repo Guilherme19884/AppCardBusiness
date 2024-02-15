@@ -8,4 +8,7 @@
     <string name="telefone">Telefone</string>
     <string name="empresa">Empresa</string>
     <string name="confirmar">Confirmar</string>
+    <string name="label_show_sucess">Cartão cadastrado com sucesso!!!</string>
+    <string name="add_businessCards">Adicionar Cartões</string>
+    <string name="label_share">Compartilhar</string>
 </resources>

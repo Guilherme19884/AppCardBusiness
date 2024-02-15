@@ -3,11 +3,10 @@ package com.guiga.cartaodevisitas.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.activity.viewModels
 import com.guiga.cartaodevisitas.App
-import com.guiga.cartaodevisitas.R
 import com.guiga.cartaodevisitas.databinding.ActivityMainBinding
+import com.guiga.cartaodevisitas.util.Image
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         binding.faFloatButton.setOnClickListener {
             val intent = Intent(this, AddBusinessCardActivity::class.java)
             startActivity(intent)
+        }
+        adpter.listenerShare = { card ->
+            Image.share(this@MainActivity, card)
         }
     }
 

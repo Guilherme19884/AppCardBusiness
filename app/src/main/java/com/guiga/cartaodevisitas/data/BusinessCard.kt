@@ -4,13 +4,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class BusinessCard (
+class BusinessCard(
 
     @PrimaryKey(autoGenerate = true)
-    val id : Int ,
-    val nome : String,
-    val telefone : String,
-    val empresa : String,
-    val email :  String,
-    val fundoPersonalizado : String
+    val id: Int = 0,
+    val nome: String,
+    val telefone: String,
+    val empresa: String,
+    val email: String,
+    val fundoPersonalizado: String
 )

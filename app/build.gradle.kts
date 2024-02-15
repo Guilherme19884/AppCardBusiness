@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -37,24 +36,27 @@ android {
 
     buildFeatures{
         viewBinding = true
+        dataBinding = true
     }
 }
 
 dependencies {
-    val room_version = "2.5.0"
+    val roomVersion = "2.4.1"
     val lifecycle_version = "2.5.0-alpha02"
     val activity_version = "1.6.1"
 
 
+    //Room
+    implementation("androidx.room:room-runtime:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
 
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+    //lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
-    implementation("androidx.activity:activity-ktx:$activity_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
 
+    //activity version
+    implementation("androidx.activity:activity-ktx:$activity_version")
 
 
     implementation("androidx.core:core-ktx:1.9.0")
